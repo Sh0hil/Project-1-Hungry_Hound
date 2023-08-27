@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  .name{
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+    background-color: #fcfcfc;
+    
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+  }
+
+.navbar{
+  background-color: rgb(205, 187, 187);
+  border-radius: 7px;
+}
+.navbar ul{
+  overflow: auto;
+}
+.navbar li{
+  float: left;
+  list-style: none;
+  margin: 13px 20px;
+}
+.navbar li a{
+  padding: 3px 3px;
+  text-decoration: none;
+  padding-top: 3px;
+  color: white;
+}
+.navbar li a:hover{
+ color: rgb(77, 77, 72);
+}
+.search{
+  float: right;
+  color: white;
+  padding: 12px 75px;
+}
+.signup{
+  text-decoration: none;
+  color: rgb(42, 38, 38);
+  float: right;
+  padding: 12px 20px;
+  padding-top: 7px;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  left: 2%;
+}
+   
+ 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+.left-column img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+.product-color {
+  margin-bottom: 30px;
+}
+ 
+.color-choose div {
+  display: inline-block;
+}
+ 
+
+ 
+.color-choose input[type=] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+ 
+ 
+.color-choose input[type=]:checked + label span {
+  background-image: url(images/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cable-choose {
+  margin-bottom: 20px;
+}
+ 
+.cable-choose button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+.cable-choose button:hover,
+.cable-choose button:active,
+.cable-choose button:focus {
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+.weight {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+ 
+.weight a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+ 
+  .left-column img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+ 
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+  <div class="name" >
+    <a href="main.html"><img src="Images/logo4.4.png" alt="logo" ></a>
+    <div class="signup" >
+     <a class="signup" href="signup.html" >Sign up</a>
+    </div>
+   
+    <div class="container" onclick="myFunction(this)">
+     <div class="bar1"></div>
+     <div class="bar2"></div>
+     <div class="bar3"></div>
+   </div>
+   <script>
+     function myFunction(x) {
+       x.classList.toggle("change");
+     }
+     </script>
+   
+   
+   <header>
+     <nav class="navbar" >
+   <ul>
+   <li><a href="main.html">Home</a></li>
+   <li><a href="#">Products</a></li>
+   <li><a href="#">About</a></li>
+   <li><a href="#">Services</a></li>
+   <li><a href="#">Contact us</a></li>
+   
+   
+   
+   <div class="search" >
+     <i class="bi-search"></i>
+         <input type="text" name="search" placeholder="Search..">
+   </div>
+   
+     </ul>
+     </nav>
+   </header>
+   </div>
+    <main class="container">
+ 
+        
+        <div class="left-column">
+          <img data-image="" class="active" src="Images/RC2.jpg" alt="">
+        </div>
+
+        <div class="right-column">
+
+        <div class="product-description">
+            <span>ROYAL CANIN</span>
+            <h1>Royal Canin</h1>
+            <p>Maxi Starter Dry Dog Food</p>
+          </div>
+       
+          <div class="product-configuration">
+            <div class="weight">
+              <span>Weight</span>
+       
+              <div class="cable-choose">
+                <button>1.5KG</button>
+                <button>2.5KG</button>
+                <button>5KG</button>
+              </div>
+            </div>
+          </div>
+       
+          <div class="product-price">
+            <span>&#8377;1500</span>
+            <a href="#" class="cart-btn">Add to cart</a>
+          </div>
+        </div>
+      </main>
+</body>
+</html>
